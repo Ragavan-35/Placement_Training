@@ -1,0 +1,44 @@
+//Strongest Number
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter n value is");
+        int n = input.nextInt();
+        int rev = 0;
+        int x = n;
+        int mod;
+        int multi = 1;
+        int sum=0;
+
+        while (x > 0) {
+            mod = x % 10;
+            for (int i = 1; i <= mod; i++) {
+                multi = multi * i;
+
+
+            }
+            sum=multi+sum;
+
+
+
+            System.out.println("the factorail num is " + multi);
+
+            //rev=rev*10+mod;
+            x = x / 10;
+            multi = 1;
+
+        }
+        System.out.println("the sum num is " +sum);
+        if(n==sum){
+            System.out.println("it is Strong number");
+        }else{
+            System.out.println("it is not a Strong number");
+        }
+
+
+    }
+
+
+
+}
